@@ -114,7 +114,7 @@ class _FlareLoadingState extends State<FlareLoading> with FlareController {
 
   _finished() {
     if (!_isLoading) {
-      WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+      WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
         if (_isSuccessful) {
           widget.onSuccess(_data);
         } else {
